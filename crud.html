@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS System</title>
+    <link rel="stylesheet" href="crudstyle.css">
+</head>
+<body>
+    <div class="crud">
+        <!-- header code  -->
+        <div class="head">
+            <h1>crud</h1>
+            <p style="margin: 9px;">Product Manegement System</p>
+        </div>
+        <div class="input">
+            <input type="text" id="title" placeholder="Enter Title..">
+            <div class="price">
+                <input onkeyup="gettotal()" type="number" id="taxes" placeholder="Enter Taxes.." >
+                <input onkeyup="gettotal()" type="number" id="price" placeholder="Enter Price.." style="margin-left: 10px;">
+                <input onkeyup="gettotal()" type="number" id="ads" placeholder="Enter ads.." style="margin-left: 10px;">
+                <input onkeyup="gettotal()" type="number" id="discount" placeholder="Enter Discount.." style="margin-left: 10px;">&NewLine;&HilbertSpace;
+                <small id="total" ></small>
+            </div>
+            <input type="number" placeholder="count" id="count">
+            <input type="text" placeholder="category" id="category">
+            <button id="submet">Create</button>
+        </div>
+
+        <div class="output">
+            <div class="search_block">
+                <input onkeyup="searchdata(this.value)" type="text" id="search" placeholder="Search">
+                <div class="btn_search">
+                    <button onclick="getsearchmood(this.id)" id="search_title">Search By Title.</button>
+                    <button onclick="getsearchmood(this.id)" id="search_category">Search By Category.</button>
+                </div>
+            </div>
+
+        </div>
+        <div id="deleteall"></div>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>TITLE</th>
+                <th>TAXES</th>
+                <th>PRICE</th>
+                <th>ADS</th>
+                <th>DISCOUNT</th>
+                <th>TOTAL</th>
+                <th>CATEGORY</th>
+                <th>UPDATE</th>
+                <th>DELETE</th>
+            </tr>
+
+            <tbody id="tbody">
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <script src="crudscript.js"></script>
+</body>
+
+<!-- مميزات البرنامج
+اضافة منتج
+اضافة اي عدد من المنتجات بضغطة
+قراءة و عرض المنتج
+حذف المنتج
+حذف كل المنتجات بضغطة
+البحث عن المنتجات بالاسم و التصنيف
+حفظ المنتجات بشكل دائم في local storage
+قادر على حساب ضريبة المنتج و مصاريف الاعلانات و ايجاد السعر النهائي
+ لن يتم اضافة البيانات الا اذا كانت صحيحة -->
+</html>
