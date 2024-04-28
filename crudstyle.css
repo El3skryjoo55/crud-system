@@ -49,7 +49,7 @@ button{
     height: 45px;
     border: none;
     cursor: pointer;
-    background: rgb(170, 85, 255);
+    background: rgba(42, 145, 118, 0.793);
     font-size: larger;
     border-radius: 22px;
     transition: 0.5s;

@@ -104,14 +104,22 @@ for (let i = 0; i < datapro.length; i++ ){
     </tr>
 
 `
+
 }
 
 
     document.getElementById('tbody').innerHTML = table_ ;
-
+    let btndelete = document.getElementById('deleteall');
+    if (datapro.length > 0){
+        btndelete.innerHTML = `
+        <button onclick='deleteall()'>Delete All</button>
+        `
+    }else{
+        btndelete.innerHTML = ``;
+    }
 
 }
-
+// showdata(); ?
 // delete.
 
 function deletedata(i){
@@ -120,6 +128,11 @@ function deletedata(i){
     showdata()
 }
 
+function deleteall(){
+    localStorage.clear()
+    datapro.splice(0)
+    showdata()
+}
 
 //count.
 
@@ -167,6 +180,7 @@ function deletedata(i){
 
 
 //clean data.
+ 
 
 
 
@@ -176,8 +190,7 @@ function deletedata(i){
 
 
 
-
-
+// .............................
 showdata()
 
 
