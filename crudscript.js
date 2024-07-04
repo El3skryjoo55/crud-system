@@ -121,7 +121,7 @@ for (let i = 0; i < datapro.length; i++ ){
 }
 // showdata(); ?
 // delete.
-
+//ooopopopopopopopopopopopopopopo
 function deletedata(i){
     datapro.splice(i, 1);
     localStorage.product = JSON.stringify(datapro);
